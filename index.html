@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script type="module" src="scripts/app.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header><h1>My cool movie search app!</h1></header>
+    <header>
+      <div><h1>My cool movie search app!</h1></div>
+    </header>
 
     <section class="formSection">
       <form action="#" method="get">
@@ -18,16 +21,39 @@
           class="search"
           placeholder="Search for movie"
           minlength="1"
+          autocomplete="off"
         />
-        <label for="search" hidden>Search for movies</label>
+        <label for="search" class="activeSearch"></label>
         <input type="submit" class="submit" value="search" />
         <label for="submit" hidden>Submit button</label>
+        <input type="reset" class="reset" value="reset" />
       </form>
       <div class="responseContent"></div>
     </section>
     <section class="resultDisplay">
       <div class="currentTitle"></div>
-      <div class="movieDiv"></div>
+      <div class="movieDiv">
+        <article data-desc>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque sit
+          ipsum aliquid, rem aliquam officia necessitatibus consequuntur, odit
+          magni quisquam et quam dolore eos quas ullam doloribus corrupti sequi
+          cupiditate.
+        </article>
+
+        <article data-pstr>
+          <img
+            src="https://m.media-amazon.com/images/M/MV5BMzA0YWMwMTUtMTVhNC00NjRkLWE2ZTgtOWEzNjJhYzNiMTlkXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+            alt=""
+            srcset=""
+          />
+        </article>
+        <article data-info>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+          voluptatibus velit deserunt. Quam culpa esse officia omnis aliquam nam
+          porro, aliquid, labore ad delectus nostrum magni pariatur eius quas
+          dolor?
+        </article>
+      </div>
     </section>
   </body>
 </html>

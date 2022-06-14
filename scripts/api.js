@@ -16,9 +16,7 @@ const getMovie = async (userSearch, divUpdate) => {
   const response = await fetchData(userSearch);
   console.log(response);
   globalConfig.search = userSearch;
-  divUpdate.innerText = response.Title;
+  divUpdate.innerText = `Did you mean "${response.Title}"?`;
 };
-
-// getMovie();
 
 export { getMovie };

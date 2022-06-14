@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="module" src="scripts/api.js" defer></script>
+  </head>
+  <body>
+    <header><h1>My cool movie search app!</h1></header>
+
+    <section class="formSection">
+      <form action="#" method="get">
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Search for movie"
+          minlength="1"
+        />
+        <label for="search" hidden>Search for movies</label>
+        <input type="submit" value="search" />
+        <label for="submit" hidden>Submit button</label>
+      </form>
+      <div class="responseContent"></div>
+    </section>
+    <section class="resultDisplay">
+      <div class="movie"></div>
+    </section>
+  </body>
+</html>

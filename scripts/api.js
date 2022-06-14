@@ -1,4 +1,4 @@
-import { globalConfig } from "./config.js";
+import { globalConfig } from "./config.js"; //api key and search term
 
 async function fetchData(userSearch = "Guardians of the galaxy") {
   // fetchaj link i cekaj odgovor
@@ -12,9 +12,13 @@ async function fetchData(userSearch = "Guardians of the galaxy") {
   return movieData;
 }
 
-const getMovie = async () => {
-  const response = await fetchData();
+const getMovie = async (userSearch, divUpdate) => {
+  const response = await fetchData(userSearch);
   console.log(response);
+  globalConfig.search = userSearch;
+  divUpdate.innerText = response.Title;
 };
 
-getMovie();
+// getMovie();
+
+export { getMovie };

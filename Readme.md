@@ -15,3 +15,5 @@ The api.js file handles async requests to the TMDB API
 
 
 app.js main logic
+Example deployment:
+https://betrion.github.io/movieFetcher/
